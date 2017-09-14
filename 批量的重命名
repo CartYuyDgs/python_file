@@ -1,0 +1,31 @@
+'''
+1.给文件名添加
+例如:abc.txt --> [于洋写的]abc.txt
+'''
+import os
+#1.获取要重命名的文件夹名字
+floder_name=input("请输入要重命名的文件夹:")
+
+#2.获取指定文件夹中的所有文件名
+file_names = os.listdir(floder_name)
+#os.chdir(floder_name) #切换到指定目录
+#3.重命名
+for name in file_names:
+	print(name)
+	old_file_name = floder_name + "/"+name
+	new_file_name = floder_name +"/"+ "[于洋写的]"+name
+	os.rename(old_file_name,new_file_name)
+	print(name)
+ ###################################################
+  '''
+  2.给文件名减少
+  例如:[于洋写的]abc.txt --> abc.txt
+  '''
+import os
+floder_name = input("请输入你要重命名的文件目录:")
+old_file_names = os.listdir(floder_name)
+os.chdir(floder_name)
+for name in old_file_names:
+	num = name.find("a")
+	new_file_names = name[num:]
+	os.rename(name,new_file_names)
