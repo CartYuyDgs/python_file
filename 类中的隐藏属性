@@ -1,0 +1,22 @@
+class Dog:
+	def __init__(self):
+		self.name = 0
+		self.age = 0
+	def __str__(self):
+		return "Dog info:name:%s,age:%d"%(self.get_name(),self.get_age())
+	def set_name(self,input_name):
+		self.name = input_name
+	def set_age(self,input_age):
+		if input_age<=0 and input_age>100:
+			print("value error!")
+		else:
+			self.age = input_age
+	def get_age(self):
+		return self.age
+	def get_name(self):
+		return self.name
+
+dog = Dog()
+dog.set_name("花花")
+dog.set_age(10)
+print(dog)
