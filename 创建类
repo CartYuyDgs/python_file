@@ -1,0 +1,22 @@
+class Cat():
+	#方法
+  	#初始化对象
+	def __init__(self,new_name,age):
+		print("*"*20)
+		self.name = new_name
+		self.age = age
+	def __str__(self):#对象的描述信息,使得print(Cat)是可以输出
+		return "%s的年龄是%d"%(self.name,self.age)
+	def eat(self):
+		print("cat eat fash...")
+	def drink(self):
+		print("cat drink keko..")
+
+	def introduce(self):
+		print("%s的年龄是%d"%(self.name,self.age))		
+#创建一个对象
+tom = Cat("tom",40)	
+lanmao = Cat("nanmao",10)
+
+print(tom)
+print(lanmao)
