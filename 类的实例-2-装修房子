@@ -1,0 +1,34 @@
+class Home:
+	def __init__(self,new_info,new_size,new_addr):
+		self.info = new_info
+		self.size = new_size
+		self.addr = new_addr
+		self.left_size = new_size
+		self.contions = []
+	def __str__(self):
+		msg = "房子的空间是:%d,房子的户型:%s,房子的地址:%s"%(self.size,self.info,self.addr)
+		msg = msg + "房子的可用空间是:%d."%(self.left_size)
+		msg = msg+ "房子的家具有:%s"%(str(self.contions))
+		return msg
+	def addbed(self,bed_info):
+		self.left_size -= bed_info.getsize()
+		self.contions.append(bed_info.getname())
+class Bed:
+	def __init__(self,bed_name,bed_size):
+		self.name = bed_name
+		self.size = bed_size
+	def __str__(self):
+		return "床的名字是:%s,床的大小是:%d"%(self.name,self.size)
+	def getsize(self):
+		return self.size
+	def getname(self):
+		return self.name
+fangzi = Home("四室一厅",220,"北京市朝阳区长安街666号")
+print(fangzi)
+bed1 = Bed("榻榻米",6)
+print(bed1)
+bed2 = Bed("席梦思",5)
+print(bed2)
+fangzi.addbed(bed1)
+fangzi.addbed(bed2)
+print(fangzi)
