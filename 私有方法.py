@@ -1,4 +1,5 @@
 class Dog:
+
         def __test1(self):
                 print("*"*10+"正在发送短信..."+"*"*10)
         def send_msg(self,money):
