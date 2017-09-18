@@ -14,7 +14,8 @@ class Dog(Animal):#继承父类
 class Xiaotq(Dog):#继承父类的父类
 	def fly(self):
 		print("***fly***")
-
+		
+		
 dog = Dog()
 dog.bark()
 dog.run()
