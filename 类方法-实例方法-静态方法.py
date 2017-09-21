@@ -1,5 +1,4 @@
-lass Game(object):
-	
+lass Game(object):	
 	num = 0#类属性
 	#实例方法
 	def __init__(self):#self可以改变
